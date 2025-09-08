@@ -19,7 +19,7 @@ Game::Game(const string& title, int width, int height) {
     initWindow();
     initRenderer();
 
-    state = new State();
+    state = nullptr;
 
 }
 
@@ -70,7 +70,7 @@ void Game::initRenderer() {
     renderer = SDL_CreateRenderer(window, -1, SDL_RENDERER_ACCELERATED);
 
     if(!renderer){
-        cerr << "ERro ao criar render: " << SDL_GetError() << endl;
+        cerr << "Erro ao criar render: " << SDL_GetError() << endl;
         exit(1);
     }
 }
@@ -85,6 +85,9 @@ State* Game::GetState() {
 
 
 void Game::Run() {
+    if(!state)
+        state = new State();
+        
     while(!state->QuitRequested()){
         state->Update(0);
         state->Render();

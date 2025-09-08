@@ -13,11 +13,14 @@ void State::LoadAssets() {
 }
 
 void State::Update(float dt) {
-    bool clique = SDL_QuitRequested();
-
-    if(clique)
-        quitRequested = true;
+    SDL_Event event;
+    while (SDL_PollEvent(&event)) {
+        if (event.type == SDL_QUIT) {
+            quitRequested = true;
+        }
+    }
 }
+
 
 void State::Render() {
     if(bg)

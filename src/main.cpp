@@ -1,17 +1,20 @@
 #include <iostream>
 #include "Game.h"
 #include "State.h"
+#include "Music.h"
 
 using namespace std;
 
+int main(int argc, char** argv) {
+    Game* game = Game::GetInstance("JOGO RÁPIDO", 800, 600);
 
-int main() {
+    State* state = new State();
+    game->GetState();
+    
+    Music bgm("Recursos/audio/BGM.wav");
+    bgm.Play(-1);
 
-    Game* game = Game::GetInstance("GAME BOM DMS", 1280, 720);
-
-    SDL_Renderer* renderer = game->GetRenderer();
-
-    cout << renderer << endl;
+    game->Run();
 
     return 0;
 }

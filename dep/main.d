@@ -279,7 +279,9 @@ dep/main.d bin/main.o: src/main.cpp /usr/include/stdc-predef.h \
  /usr/include/SDL2/SDL_render.h /usr/include/SDL2/SDL_shape.h \
  /usr/include/SDL2/SDL_system.h /usr/include/SDL2/SDL_timer.h \
  /usr/include/SDL2/SDL_version.h /usr/include/SDL2/SDL_locale.h \
- /usr/include/SDL2/SDL_misc.h include/State.h include/State.h
+ /usr/include/SDL2/SDL_misc.h include/State.h include/Sprite.h \
+ include/Music.h /usr/include/SDL2/SDL_mixer.h include/State.h \
+ include/Music.h
 /usr/include/stdc-predef.h:
 /usr/include/c++/13/iostream:
 /usr/include/c++/13/bits/requires_hosted.h:
@@ -625,4 +627,8 @@ include/Game.h:
 /usr/include/SDL2/SDL_locale.h:
 /usr/include/SDL2/SDL_misc.h:
 include/State.h:
+include/Sprite.h:
+include/Music.h:
+/usr/include/SDL2/SDL_mixer.h:
 include/State.h:
+include/Music.h:

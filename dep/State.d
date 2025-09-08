@@ -245,7 +245,8 @@ dep/State.d bin/State.o: src/State.cpp /usr/include/stdc-predef.h \
  /usr/include/SDL2/SDL_render.h /usr/include/SDL2/SDL_shape.h \
  /usr/include/SDL2/SDL_system.h /usr/include/SDL2/SDL_timer.h \
  /usr/include/SDL2/SDL_version.h /usr/include/SDL2/SDL_locale.h \
- /usr/include/SDL2/SDL_misc.h
+ /usr/include/SDL2/SDL_misc.h include/Sprite.h include/Music.h \
+ /usr/include/SDL2/SDL_mixer.h
 /usr/include/stdc-predef.h:
 include/State.h:
 /usr/include/c++/13/string:
@@ -543,3 +544,6 @@ include/State.h:
 /usr/include/SDL2/SDL_version.h:
 /usr/include/SDL2/SDL_locale.h:
 /usr/include/SDL2/SDL_misc.h:
+include/Sprite.h:
+include/Music.h:
+/usr/include/SDL2/SDL_mixer.h:

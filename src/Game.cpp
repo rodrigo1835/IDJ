@@ -19,6 +19,8 @@ Game::Game(const string& title, int width, int height) {
     initWindow();
     initRenderer();
 
+    state = new State();
+
 }
 
 Game* Game::GetInstance(const string& title, int width, int height) {
@@ -75,6 +77,20 @@ void Game::initRenderer() {
 
 SDL_Renderer* Game::GetRenderer() {
     return renderer;
+}
+
+State* Game::GetState() {
+    return state;
+}
+
+
+void Game::Run() {
+    while(!state->QuitRequested()){
+        state->Update(0);
+        state->Render();
+        SDL_RenderPresent(renderer);
+        SDL_Delay(33);
+    }
 }
 
 

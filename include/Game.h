@@ -3,10 +3,11 @@
 
 #include <string>
 #include <SDL2/SDL.h>
+#include "State.h"
 
 using namespace std;
 
-class State;
+
 
 class Game {
     private:
@@ -28,9 +29,8 @@ class Game {
 
         State* state;
         
-        void run();
-
     public:
+        void Run();
         static Game * GetInstance(const string& title = "Game", int width = 800, int height = 600);
         State* GetState();
         SDL_Renderer* GetRenderer();

@@ -7,6 +7,7 @@ class Vec2{
 
 	float x,y;
 	Vec2();
+	Vec2(float x, float y);
 
 	void somar(Vec2 v);
 	void subtrair(Vec2 v);

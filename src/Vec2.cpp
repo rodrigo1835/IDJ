@@ -6,6 +6,11 @@ Vec2::Vec2() {
 	y = 0;
 }
 
+Vec2::Vec2(float x, float y) {
+	this-> x = x;
+	this-> y = y;
+}
+
 
 void Vec2::somar(Vec2 v1) {
 	x += v1.x;
@@ -22,7 +27,7 @@ void Vec2::multiplicacao(float k) {
 	y *= k;
 }
 
-float Vec2::magnitude() {
+float Vec2::magnitude() const{
 	return sqrt(pow(x,2) + pow(y,2));
 }
 
@@ -32,11 +37,11 @@ void Vec2::normalizar() {
 	y /= m;
 }
 
-float Vec2::distancia(Vec2 v) {
+float Vec2::distancia(Vec2 v) const{
 	return sqrt(pow( (v.x - x), 2) + pow( (v.y - y), 2) );
 }
 
-float Vec2::inclinacaoX() {
+float Vec2::inclinacaoX() const{
 	return atan2(y,x);
 }
 
